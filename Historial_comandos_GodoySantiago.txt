@@ -1,0 +1,59 @@
+ssh-keygen
+cat $HOME/.ssh/*.pub
+cd .ssh/
+ls -la
+cat id_rsa.pub
+sudo apt install git
+git --version
+git clone git@github.com:SantiagoDaniloGodoy/TP_AySO.git
+cp README miercoles4/
+cd repogit
+cd
+mkdir repogit
+cd repogit
+git clone git@github.com:SantiagoDaniloGodoy/TP_AySO.git
+cd TP_AySO/
+pwd
+ls -l
+cat /etc/passwd
+man grep
+grep UBUNTU /etc/passwd
+grep ubuntu /etc/passwd
+grep -i Ubuntu /etc/passwd
+grep -i ubuntu /etc/passwd | awk -F: '{print $2}' > datos_usuario.txt
+cat datos_usuario.txt
+whoami
+echo “Usuario=$(whoami)” >> datos_usuario.txt
+git add
+git add .
+git config --global user.email daniigodoy890@gmail.com
+git config --global user.name SantiagoDaniloGodoy
+git commit -m "feat: agregar ejercicio de datos_usuario.txt"
+vagrant@ubuntu-jammy:~/repogit/TP_AySO$ git status
+git push origin main
+grep "model name" /proc/cpuinfo | head -n 1 > info_pc.txt
+cat info_pc.txt
+git add info_pc.txt
+git commit -m "feat: Añadiendo información de CPU"
+git log --oneline
+git push origin main
+grep -v nologin /etc/passwd | head -n 10 | sort -t: -k7 > lista_ordenada
+cat lista_ordenada
+git add lista_ordenada
+git commit -m "ADD: Listado de usuarios ordenada"
+git push origin main
+cat << EOF >> README.md
+Alumno: Santiago Godoy
+División: 116
+Turno: Mañana
+EOF
+
+git add README.md
+git commit -m "docs: agregar información del alumno al README"
+mkdir -p TP1/arquitectura/clase{1..5} TP1/so/clase{1..6}
+nano script_dir.sh
+chmod +x script_dir.sh
+git add .
+git commit -m "ADD: Añadiendo script"
+git push
+history -a
